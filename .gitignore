@@ -1,1 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
+.idea/artifacts/
+.idea/workspace.xml
+out/
