@@ -7,7 +7,7 @@ import javafx.scene.layout.Pane;
 
 public class Controller {
     @FXML
-    Pane fxPaneRoot, fxPane_1, fxPane_2;
+    Pane fxPaneRoot, fxPane_1, fxPane_2, fxPane_3;
 
     //Initialisierung der Oberflaeche
     public void initialize(){
@@ -26,9 +26,17 @@ public class Controller {
         fxPaneRoot.getChildren().add(fxPane_2);
     }
 
-    /*public void weiter_23(){
+    //Button zurueck auf GridPane_2
+    public  void zurueck_21(){
+        fxPaneRoot.getChildren().clear();
+        fxPaneRoot.getChildren().add(fxPane_1);
+    }
 
-    }*/
+    //Button weiter auf GridPane_2
+    public void weiter_23(){
+        fxPaneRoot.getChildren().clear();
+        fxPaneRoot.getChildren().add(fxPane_3);
+    }
 
     public void zurueck_2_to_1(){
 
