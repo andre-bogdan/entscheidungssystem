@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -14,7 +19,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="entscheidungssystem.Controller.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="entscheidungssystem.Controller.Controller">
    <children>
       <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -54,7 +59,8 @@
                     </columnConstraints>
                     <rowConstraints>
                       <RowConstraints percentHeight="15.0" vgrow="SOMETIMES" />
-                        <RowConstraints percentHeight="15.0" vgrow="SOMETIMES" />
+                        <RowConstraints percentHeight="8.0" vgrow="SOMETIMES" />
+                        <RowConstraints percentHeight="7.0" vgrow="SOMETIMES" />
                       <RowConstraints percentHeight="60.0" vgrow="SOMETIMES" />
                       <RowConstraints percentHeight="10.0" vgrow="SOMETIMES" />
                     </rowConstraints>
@@ -64,7 +70,7 @@
                               <Font size="24.0" />
                            </font></Label>
                         <Label contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="Zwischen welchen Sachen soll entschieden werden?" textAlignment="CENTER" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                        <GridPane GridPane.columnSpan="2" GridPane.rowIndex="2">
+                        <GridPane GridPane.columnSpan="2" GridPane.rowIndex="3">
                           <columnConstraints>
                             <ColumnConstraints hgrow="SOMETIMES" percentWidth="10.0" />
                             <ColumnConstraints hgrow="SOMETIMES" percentWidth="90.0" />
@@ -129,7 +135,7 @@
                               </TextField>
                            </children>
                         </GridPane>
-                        <Button minHeight="30.0" minWidth="75.0" mnemonicParsing="false" onAction="#weiter_12" text="weiter" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                        <Button minHeight="30.0" minWidth="75.0" mnemonicParsing="false" onAction="#weiter_12" text="weiter" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                            <GridPane.margin>
                               <Insets left="50.0" />
                            </GridPane.margin>
@@ -147,7 +153,8 @@
                      </columnConstraints>
                      <rowConstraints>
                         <RowConstraints percentHeight="15.0" vgrow="SOMETIMES" />
-                        <RowConstraints percentHeight="15.0" vgrow="SOMETIMES" />
+                        <RowConstraints percentHeight="8.0" vgrow="SOMETIMES" />
+                        <RowConstraints percentHeight="7.0" vgrow="SOMETIMES" />
                         <RowConstraints percentHeight="60.0" vgrow="SOMETIMES" />
                         <RowConstraints percentHeight="10.0" vgrow="SOMETIMES" />
                      </rowConstraints>
@@ -157,8 +164,8 @@
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label text="Nach welchen Eigenschaften soll entschieden werden? ( es können auch subjektive, nicht zählbare Eigenschaften benutzt werden )" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                        <GridPane GridPane.columnSpan="2" GridPane.rowIndex="2">
+                        <Label text="Nach welchen Eigenschaften soll entschieden werden?" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <GridPane GridPane.columnSpan="2" GridPane.rowIndex="3">
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" percentWidth="10.0" />
                               <ColumnConstraints hgrow="SOMETIMES" percentWidth="90.0" />
@@ -223,16 +230,17 @@
                               </TextField>
                            </children>
                         </GridPane>
-                        <Button minHeight="30.0" minWidth="75.0" mnemonicParsing="false" onAction="#zurueck_21" text="zurück" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                        <Button minHeight="30.0" minWidth="75.0" mnemonicParsing="false" onAction="#zurueck_21" text="zurück" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                            <GridPane.margin>
                               <Insets right="50.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button minHeight="30.0" minWidth="75.0" mnemonicParsing="false" onAction="#weiter_23" text="weiter" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                        <Button minHeight="30.0" minWidth="75.0" mnemonicParsing="false" onAction="#weiter_23" text="weiter" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                            <GridPane.margin>
                               <Insets left="50.0" />
                            </GridPane.margin>
                         </Button>
+                        <Label layoutX="231.0" layoutY="151.0" text="( Eigenschaften, die für Sie persönlich wichtig sind )" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                      </children>
                   </GridPane>
                </children>
@@ -246,7 +254,8 @@
                      </columnConstraints>
                      <rowConstraints>
                         <RowConstraints percentHeight="15.0" vgrow="SOMETIMES" />
-                        <RowConstraints percentHeight="15.0" vgrow="SOMETIMES" />
+                        <RowConstraints percentHeight="8.0" vgrow="SOMETIMES" />
+                        <RowConstraints percentHeight="7.0" vgrow="SOMETIMES" />
                         <RowConstraints percentHeight="60.0" vgrow="SOMETIMES" />
                         <RowConstraints percentHeight="10.0" vgrow="SOMETIMES" />
                      </rowConstraints>
@@ -256,8 +265,8 @@
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label text="Verteilen Sie insgesamt 100 Pkt je nach Wichtigkeit auf alle Kriterien" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-                        <GridPane prefHeight="342.0" prefWidth="802.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                        <Label text="Sortieren Sie die Kriterien nach Wichtigkeit" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <GridPane prefHeight="342.0" prefWidth="802.0" GridPane.columnSpan="2" GridPane.rowIndex="3">
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" percentWidth="10.0" />
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="70.0" prefWidth="100.0" />
@@ -342,16 +351,17 @@
                               </Button>
                            </children>
                         </GridPane>
-                        <Button minHeight="30.0" minWidth="75.0" mnemonicParsing="false" onAction="#zurueck_32" text="zurück" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                        <Button minHeight="30.0" minWidth="75.0" mnemonicParsing="false" onAction="#zurueck_32" text="zurück" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                            <GridPane.margin>
                               <Insets right="50.0" />
                            </GridPane.margin>
                         </Button>
-                        <Button minHeight="30.0" minWidth="75.0" mnemonicParsing="false" onAction="#weiter_34" text="weiter" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                        <Button minHeight="30.0" minWidth="75.0" mnemonicParsing="false" onAction="#weiter_34" text="weiter" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                            <GridPane.margin>
                               <Insets left="50.0" />
                            </GridPane.margin>
                         </Button>
+                        <Label layoutX="269.0" layoutY="151.0" text="( von wichtig (oben) nach unwichtig )" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                      </children>
                   </GridPane>
                </children>
