@@ -32,13 +32,21 @@ public class Controller {
         fxPaneRoot.getChildren().add(fxPane_1);
     }
 
-    //Button weiter auf GridPane_2
+    //Button weiter auf GridPane_3
     public void weiter_23(){
         fxPaneRoot.getChildren().clear();
         fxPaneRoot.getChildren().add(fxPane_3);
     }
 
-    public void zurueck_2_to_1(){
+    //Button zurueck auf GridPane_3
+    public  void zurueck_32(){
+        fxPaneRoot.getChildren().clear();
+        fxPaneRoot.getChildren().add(fxPane_2);
+    }
 
+    //Button weiter auf GridPane_4
+    public void weiter_34(){
+        fxPaneRoot.getChildren().clear();
+        fxPaneRoot.getChildren().add(fxPane_3);
     }
 }
