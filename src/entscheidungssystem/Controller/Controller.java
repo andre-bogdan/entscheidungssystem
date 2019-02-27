@@ -20,26 +20,36 @@ public class Controller {
             fxPane_1_tf_1, fxPane_1_tf_2, fxPane_1_tf_3, fxPane_1_tf_4, fxPane_1_tf_5,
             fxPane_2_tf_1, fxPane_2_tf_2, fxPane_2_tf_3, fxPane_2_tf_4, fxPane_2_tf_5;
 
+    //zur einfacheren Verarbeitung TextFelder in ArrayList speichern
+    ArrayList<TextField> tf_pane_1 = new ArrayList();
+
     //ArrayList fuer die Kriterien
     ArrayList<Kriterien> kriterien = new ArrayList<>();
     //ArrayList fuer die Alternativen
     ArrayList<Alternativen> alternativen = new ArrayList<>();
 
     //Initialisierung der Oberflaeche
-    public void initialize(){
+    public void initialize() {
         fxPaneRoot.getChildren().clear();
         fxPaneRoot.getChildren().add(fxPane_1);
     }
 
     //MenueItem beenden
-    public void progBeenden(){
+    public void progBeenden() {
         System.exit(0);
     }
 
     //Button weiter auf GridPane_1
-    public void weiter_12(){
+    public void weiter_12() {
         //Kriterien aus Pane_1 auslesen und in ArrayList schreiben
-        if (!(fxPane_1_tf_1.getText().equals(""))) {
+        //ArrayList fuer die TextFelder
+        tf_pane_1.add(fxPane_1_tf_1);
+        tf_pane_1.add(fxPane_1_tf_2);
+        tf_pane_1.add(fxPane_1_tf_3);
+        tf_pane_1.add(fxPane_1_tf_4);
+        tf_pane_1.add(fxPane_1_tf_5);
+
+        /*if (!(fxPane_1_tf_1.getText().equals(""))) {
             Alternativen alt1 = new Alternativen(fxPane_1_tf_1.getText());
             alternativen.add(alt1);
         }
@@ -47,6 +57,18 @@ public class Controller {
             Alternativen alt2 = new Alternativen(fxPane_1_tf_2.getText());
             alternativen.add(alt2);
         }
+        if (!(fxPane_1_tf_3.getText().equals(""))) {
+            Alternativen alt3 = new Alternativen(fxPane_1_tf_3.getText());
+            alternativen.add(alt3);
+        }
+        if (!(fxPane_1_tf_4.getText().equals(""))) {
+            Alternativen alt4 = new Alternativen(fxPane_1_tf_4.getText());
+            alternativen.add(alt4);
+        }
+        if (!(fxPane_1_tf_5.getText().equals(""))) {
+            Alternativen alt5 = new Alternativen(fxPane_1_tf_5.getText());
+            alternativen.add(alt5);
+        }*/
         //test
         System.out.println(alternativen.size());
 
@@ -55,31 +77,31 @@ public class Controller {
     }
 
     //Button zurueck auf GridPane_2
-    public  void zurueck_21(){
+    public void zurueck_21() {
         fxPaneRoot.getChildren().clear();
         fxPaneRoot.getChildren().add(fxPane_1);
     }
 
     //Button weiter auf GridPane_3
-    public void weiter_23(){
+    public void weiter_23() {
         fxPaneRoot.getChildren().clear();
         fxPaneRoot.getChildren().add(fxPane_3);
     }
 
     //Button zurueck auf GridPane_3
-    public  void zurueck_32(){
+    public void zurueck_32() {
         fxPaneRoot.getChildren().clear();
         fxPaneRoot.getChildren().add(fxPane_2);
     }
 
     //Button weiter auf GridPane_4
-    public void weiter_34(){
+    public void weiter_34() {
         fxPaneRoot.getChildren().clear();
         fxPaneRoot.getChildren().add(fxPane_4);
     }
 
     //Button zurueck auf GridPane_4
-    public  void zurueck_43(){
+    public void zurueck_43() {
         fxPaneRoot.getChildren().clear();
         fxPaneRoot.getChildren().add(fxPane_3);
     }
