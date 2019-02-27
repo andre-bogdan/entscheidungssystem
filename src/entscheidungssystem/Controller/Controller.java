@@ -22,6 +22,7 @@ public class Controller {
 
     //zur einfacheren Verarbeitung TextFelder in ArrayList speichern
     ArrayList<TextField> tf_pane_1 = new ArrayList();
+    ArrayList<TextField> tf_pane_2 = new ArrayList();
 
     //ArrayList fuer die Kriterien
     ArrayList<Kriterien> kriterien = new ArrayList<>();
@@ -48,6 +49,12 @@ public class Controller {
         tf_pane_1.add(fxPane_1_tf_3);
         tf_pane_1.add(fxPane_1_tf_4);
         tf_pane_1.add(fxPane_1_tf_5);
+
+        //Inhalte aus TextFeldern in ArrayListe schreiben
+        for(TextField element : tf_pane_1)
+        {
+
+        }
 
         /*if (!(fxPane_1_tf_1.getText().equals(""))) {
             Alternativen alt1 = new Alternativen(fxPane_1_tf_1.getText());
