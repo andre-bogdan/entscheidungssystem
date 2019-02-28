@@ -24,10 +24,10 @@ public class Controller {
     ArrayList<TextField> tf_pane_1 = new ArrayList();
     ArrayList<TextField> tf_pane_2 = new ArrayList();
 
-    //ArrayList fuer die Kriterien
-    ArrayList<Kriterien> kriterien = new ArrayList<>();
     //ArrayList fuer die Alternativen
     ArrayList<Alternativen> alternativen = new ArrayList<>();
+    //ArrayList fuer die Kriterien
+    ArrayList<Kriterien> kriterien = new ArrayList<>();
 
     //Initialisierung der Oberflaeche
     public void initialize() {
@@ -53,31 +53,16 @@ public class Controller {
         //Inhalte aus TextFeldern in ArrayListe schreiben
         for(TextField element : tf_pane_1)
         {
-
+            if (!(element.getText().equals(""))) {
+                Alternativen alt = new Alternativen(element.getText());
+                alternativen.add(alt);
+            }
         }
 
-        /*if (!(fxPane_1_tf_1.getText().equals(""))) {
-            Alternativen alt1 = new Alternativen(fxPane_1_tf_1.getText());
-            alternativen.add(alt1);
-        }
-        if (!(fxPane_1_tf_2.getText().equals(""))) {
-            Alternativen alt2 = new Alternativen(fxPane_1_tf_2.getText());
-            alternativen.add(alt2);
-        }
-        if (!(fxPane_1_tf_3.getText().equals(""))) {
-            Alternativen alt3 = new Alternativen(fxPane_1_tf_3.getText());
-            alternativen.add(alt3);
-        }
-        if (!(fxPane_1_tf_4.getText().equals(""))) {
-            Alternativen alt4 = new Alternativen(fxPane_1_tf_4.getText());
-            alternativen.add(alt4);
-        }
-        if (!(fxPane_1_tf_5.getText().equals(""))) {
-            Alternativen alt5 = new Alternativen(fxPane_1_tf_5.getText());
-            alternativen.add(alt5);
+        /*for (int i = 0; i<alternativen.size(); i++){
+            System.out.println(alternativen.get(i).getName(alternativen.get(i)));
         }*/
-        //test
-        System.out.println(alternativen.size());
+
 
         fxPaneRoot.getChildren().clear();
         fxPaneRoot.getChildren().add(fxPane_2);
