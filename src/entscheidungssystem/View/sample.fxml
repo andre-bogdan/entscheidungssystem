@@ -300,26 +300,26 @@
                                     <Insets right="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Label text="Kriterium 1" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                              <Label fx:id="fx_pane_3_tf_1" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                  <GridPane.margin>
                                     <Insets left="20.0" right="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Label layoutX="110.0" layoutY="36.0" text="Kriterium 2" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                              <Label fx:id="fx_pane_3_tf_2" layoutX="110.0" layoutY="36.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                                  <GridPane.margin>
                                     <Insets left="20.0" right="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Label layoutX="110.0" layoutY="104.0" text="Kriterium 3" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                              <Label fx:id="fx_pane_3_tf_3" layoutX="110.0" layoutY="104.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                  <GridPane.margin>
                                     <Insets left="20.0" right="20.0" />
                                  </GridPane.margin></Label>
-                              <Label layoutX="110.0" layoutY="173.0" text="Kriterium 4" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                              <Label fx:id="fx_pane_3_tf_4" layoutX="110.0" layoutY="173.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                                  <GridPane.margin>
                                     <Insets left="20.0" right="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Label layoutX="110.0" layoutY="241.0" text="Kriterium 5" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                              <Label fx:id="fx_pane_3_tf_5" layoutX="110.0" layoutY="241.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                                  <GridPane.margin>
                                     <Insets left="20.0" right="20.0" />
                                  </GridPane.margin>

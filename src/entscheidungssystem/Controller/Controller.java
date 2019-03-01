@@ -18,11 +18,13 @@ public class Controller {
     @FXML
     TextField
             fxPane_1_tf_1, fxPane_1_tf_2, fxPane_1_tf_3, fxPane_1_tf_4, fxPane_1_tf_5,
-            fxPane_2_tf_1, fxPane_2_tf_2, fxPane_2_tf_3, fxPane_2_tf_4, fxPane_2_tf_5;
+            fxPane_2_tf_1, fxPane_2_tf_2, fxPane_2_tf_3, fxPane_2_tf_4, fxPane_2_tf_5,
+            fxPane_3_tf_1, fxPane_3_tf_2, fxPane_3_tf_3, fxPane_3_tf_4, fxPane_3_tf_5;
 
     //zur einfacheren Verarbeitung TextFelder in ArrayList speichern
     ArrayList<TextField> tf_pane_1 = new ArrayList();
     ArrayList<TextField> tf_pane_2 = new ArrayList();
+    ArrayList<TextField> tf_pane_3 = new ArrayList();
 
     //ArrayList fuer die Alternativen
     ArrayList<Alternativen> alternativen = new ArrayList<>();
@@ -42,7 +44,7 @@ public class Controller {
 
     //Button weiter auf GridPane_1
     public void weiter_12() {
-        //Kriterien aus Pane_1 auslesen und in ArrayList schreiben
+        //Alternativen aus Pane_1 auslesen und in ArrayList schreiben
         //ArrayList fuer die TextFelder
         tf_pane_1.add(fxPane_1_tf_1);
         tf_pane_1.add(fxPane_1_tf_2);
@@ -52,17 +54,10 @@ public class Controller {
 
         //Inhalte aus TextFeldern in ArrayListe schreiben
         for(TextField element : tf_pane_1)
-        {
             if (!(element.getText().equals(""))) {
                 Alternativen alt = new Alternativen(element.getText());
                 alternativen.add(alt);
             }
-        }
-
-        /*for (int i = 0; i<alternativen.size(); i++){
-            System.out.println(alternativen.get(i).getName(alternativen.get(i)));
-        }*/
-
 
         fxPaneRoot.getChildren().clear();
         fxPaneRoot.getChildren().add(fxPane_2);
@@ -70,24 +65,55 @@ public class Controller {
 
     //Button zurueck auf GridPane_2
     public void zurueck_21() {
+        //Inhalte zuruecksetzen
+        tf_pane_1.clear();
+        alternativen.clear();
         fxPaneRoot.getChildren().clear();
         fxPaneRoot.getChildren().add(fxPane_1);
     }
 
-    //Button weiter auf GridPane_3
+    //Button weiter auf GridPane_2
     public void weiter_23() {
+        //Kriterien aus Pane_2 auslesen und in ArrayList schreiben
+        //ArrayList fuer die TextFelder
+        tf_pane_2.add(fxPane_2_tf_1);
+        tf_pane_2.add(fxPane_2_tf_2);
+        tf_pane_2.add(fxPane_2_tf_3);
+        tf_pane_2.add(fxPane_2_tf_4);
+        tf_pane_2.add(fxPane_2_tf_5);
+
+        //Inhalte aus TextFeldern in ArrayListe schreiben
+        for(TextField element : tf_pane_2)
+            if (!(element.getText().equals(""))) {
+                Kriterien krit = new Kriterien(element.getText());
+                kriterien.add(krit);
+            }
+
         fxPaneRoot.getChildren().clear();
         fxPaneRoot.getChildren().add(fxPane_3);
     }
 
     //Button zurueck auf GridPane_3
     public void zurueck_32() {
+        //Inhalte zuruecksetzen
+        tf_pane_2.clear();
+        kriterien.clear();
         fxPaneRoot.getChildren().clear();
         fxPaneRoot.getChildren().add(fxPane_2);
     }
 
-    //Button weiter auf GridPane_4
+    //Button weiter auf GridPane_3
     public void weiter_34() {
+        //ArrayList fuer die TextFelder
+        tf_pane_3.add(fxPane_3_tf_1);
+        tf_pane_3.add(fxPane_3_tf_2);
+        tf_pane_3.add(fxPane_3_tf_3);
+        tf_pane_3.add(fxPane_3_tf_4);
+        tf_pane_3.add(fxPane_3_tf_5);
+        int i = 1;
+        for(Kriterien element : kriterien){
+            tf_pane_3.get(i).setText(kriterien.get(i).getKriterium());
+            }
         fxPaneRoot.getChildren().clear();
         fxPaneRoot.getChildren().add(fxPane_4);
     }
