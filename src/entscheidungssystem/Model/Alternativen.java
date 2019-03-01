@@ -1,7 +1,7 @@
 package entscheidungssystem.Model;
 
 public class Alternativen {
-    String name;
+    private String name;
 
     public Alternativen(String name) {
         this.name = name;

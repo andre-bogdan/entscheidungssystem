@@ -1,8 +1,8 @@
 package entscheidungssystem.Model;
 
 public class Kriterien {
-    String kriterium;
-    int wert;
+    private String kriterium;
+    private int wert;
 
     public Kriterien(String kriterium) {
         this.kriterium = kriterium;

@@ -3,6 +3,7 @@ package entscheidungssystem.Controller;
 import entscheidungssystem.Model.Alternativen;
 import entscheidungssystem.Model.Kriterien;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -18,13 +19,16 @@ public class Controller {
     @FXML
     TextField
             fxPane_1_tf_1, fxPane_1_tf_2, fxPane_1_tf_3, fxPane_1_tf_4, fxPane_1_tf_5,
-            fxPane_2_tf_1, fxPane_2_tf_2, fxPane_2_tf_3, fxPane_2_tf_4, fxPane_2_tf_5,
-            fxPane_3_tf_1, fxPane_3_tf_2, fxPane_3_tf_3, fxPane_3_tf_4, fxPane_3_tf_5;
+            fxPane_2_tf_1, fxPane_2_tf_2, fxPane_2_tf_3, fxPane_2_tf_4, fxPane_2_tf_5;
+
+    @FXML
+    Label
+            fxPane_3_l_1, fxPane_3_l_2, fxPane_3_l_3, fxPane_3_l_4, fxPane_3_l_5;
 
     //zur einfacheren Verarbeitung TextFelder in ArrayList speichern
     ArrayList<TextField> tf_pane_1 = new ArrayList();
     ArrayList<TextField> tf_pane_2 = new ArrayList();
-    ArrayList<TextField> tf_pane_3 = new ArrayList();
+    ArrayList<Label> l_pane_3 = new ArrayList();
 
     //ArrayList fuer die Alternativen
     ArrayList<Alternativen> alternativen = new ArrayList<>();
@@ -105,14 +109,15 @@ public class Controller {
     //Button weiter auf GridPane_3
     public void weiter_34() {
         //ArrayList fuer die TextFelder
-        tf_pane_3.add(fxPane_3_tf_1);
-        tf_pane_3.add(fxPane_3_tf_2);
-        tf_pane_3.add(fxPane_3_tf_3);
-        tf_pane_3.add(fxPane_3_tf_4);
-        tf_pane_3.add(fxPane_3_tf_5);
+        l_pane_3.add(fxPane_3_l_1);
+        l_pane_3.add(fxPane_3_l_2);
+        l_pane_3.add(fxPane_3_l_3);
+        l_pane_3.add(fxPane_3_l_4);
+        l_pane_3.add(fxPane_3_l_5);
         int i = 1;
         for(Kriterien element : kriterien){
-            tf_pane_3.get(i).setText(kriterien.get(i).getKriterium());
+            l_pane_3.get(i).setText(kriterien.get(i).getKriterium());
+            i++;
             }
         fxPaneRoot.getChildren().clear();
         fxPaneRoot.getChildren().add(fxPane_4);
