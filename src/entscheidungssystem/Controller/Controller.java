@@ -78,6 +78,8 @@ public class Controller {
 
     //Button weiter auf GridPane_2
     public void weiter_23() {
+        tf_pane_2.clear();
+        kriterien.clear();
         //Kriterien aus Pane_2 auslesen und in ArrayList schreiben
         //ArrayList fuer die TextFelder
         tf_pane_2.add(fxPane_2_tf_1);
@@ -95,6 +97,19 @@ public class Controller {
 
         fxPaneRoot.getChildren().clear();
         fxPaneRoot.getChildren().add(fxPane_3);
+
+        /*fxPane_3_l_1.setText("test");*/
+
+        //ArrayList fuer die TextFelder
+        l_pane_3.add(fxPane_3_l_1);
+        l_pane_3.add(fxPane_3_l_2);
+        l_pane_3.add(fxPane_3_l_3);
+        l_pane_3.add(fxPane_3_l_4);
+        l_pane_3.add(fxPane_3_l_5);
+
+        for (int i = 0; i < kriterien.size(); i++) {
+            l_pane_3.get(i).setText(kriterien.get(i).getKriterium());
+        }
     }
 
     //Button zurueck auf GridPane_3
@@ -108,17 +123,14 @@ public class Controller {
 
     //Button weiter auf GridPane_3
     public void weiter_34() {
+
         //ArrayList fuer die TextFelder
         l_pane_3.add(fxPane_3_l_1);
         l_pane_3.add(fxPane_3_l_2);
         l_pane_3.add(fxPane_3_l_3);
         l_pane_3.add(fxPane_3_l_4);
         l_pane_3.add(fxPane_3_l_5);
-        int i = 1;
-        for(Kriterien element : kriterien){
-            l_pane_3.get(i).setText(kriterien.get(i).getKriterium());
-            i++;
-            }
+
         fxPaneRoot.getChildren().clear();
         fxPaneRoot.getChildren().add(fxPane_4);
     }
@@ -127,5 +139,55 @@ public class Controller {
     public void zurueck_43() {
         fxPaneRoot.getChildren().clear();
         fxPaneRoot.getChildren().add(fxPane_3);
+    }
+
+    //Button hoch 01
+    public void change_01(){
+        if (kriterien.size() >= 2) {
+            Kriterien element_0 = kriterien.get(0);
+            Kriterien element_1 = kriterien.get(1);
+            kriterien.set(0, element_1);
+            kriterien.set(1, element_0);
+            update_3();
+        }
+    }
+    //Button hoch 12
+    public void change_12(){
+        if (kriterien.size() >= 3) {
+            Kriterien element_1 = kriterien.get(1);
+            Kriterien element_2 = kriterien.get(2);
+            kriterien.set(1, element_2);
+            kriterien.set(2, element_1);
+            update_3();
+        }
+    }
+    //Button hoch 23
+    public void change_23(){
+        if (kriterien.size() >= 4) {
+            Kriterien element_2 = kriterien.get(2);
+            Kriterien element_3 = kriterien.get(3);
+            kriterien.set(2, element_3);
+            kriterien.set(3, element_2);
+            update_3();
+        }
+    }
+    //Button hoch 34
+    public void change_34(){
+        if (kriterien.size() >= 5) {
+            Kriterien element_3 = kriterien.get(3);
+            Kriterien element_4 = kriterien.get(4);
+            kriterien.set(3, element_4);
+            kriterien.set(4, element_3);
+            update_3();
+        }
+    }
+
+    //Pane 3 anzeigen (nach sortierung)
+    public void update_3(){
+        fxPaneRoot.getChildren().clear();
+        fxPaneRoot.getChildren().add(fxPane_3);
+        for (int i = 0; i < kriterien.size(); i++) {
+            l_pane_3.get(i).setText(kriterien.get(i).getKriterium());
+        }
     }
 }
