@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -329,7 +330,7 @@
                                     <Insets left="20.0" right="20.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Button mnemonicParsing="false" onAction="#change_01" text="hoch" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                              <Button mnemonicParsing="false" onAction="#change_01" prefHeight="30.0" prefWidth="30.0" style="-fx-background-image: url('/entscheidungssystem/pfeile.jpg');" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                  <GridPane.margin>
                                     <Insets left="20.0" />
                                  </GridPane.margin>
