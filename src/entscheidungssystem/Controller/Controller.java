@@ -124,15 +124,17 @@ public class Controller {
     //Button weiter auf GridPane_3
     public void weiter_34() {
 
-        //ArrayList fuer die TextFelder
+        /*//ArrayList fuer die TextFelder
         l_pane_3.add(fxPane_3_l_1);
         l_pane_3.add(fxPane_3_l_2);
         l_pane_3.add(fxPane_3_l_3);
         l_pane_3.add(fxPane_3_l_4);
-        l_pane_3.add(fxPane_3_l_5);
+        l_pane_3.add(fxPane_3_l_5);*/
 
         fxPaneRoot.getChildren().clear();
         fxPaneRoot.getChildren().add(fxPane_4);
+
+
     }
 
     //Button zurueck auf GridPane_4
